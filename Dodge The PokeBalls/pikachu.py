@@ -26,4 +26,5 @@ class Pikachu(pygame.sprite.Sprite):
         return self.rect.colliderect(other_rect)
 
     def draw(self, surface, x, y):
+        # pygame.draw.rect(surface, (255, 0, 0), self.rect)
         surface.blit(self.image, (x, y))
