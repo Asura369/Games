@@ -103,13 +103,10 @@ if __name__ == "__main__":
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
-                    # pause = False
                     flyDirection = 1
-
 
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_SPACE:
-                    # pause = False
                     flyDirection = -1
 
         # update score
@@ -122,8 +119,6 @@ if __name__ == "__main__":
         # shows start screen
         if pause:
             startScreen()
-
-
             continue
 
         # spawn fearows and increase fearows and pidgeot speed gradually
@@ -132,9 +127,6 @@ if __name__ == "__main__":
         if chance == 1:
             fearowSpeed += addSpeed
             pidgeot.speed += addFlySpeed
-
-        print(f'pidgeot speed: {pidgeot.speed:0.2f}')
-        print(f'fearow  speed: {fearowSpeed:0.2f}')
 
         # Update game objects
         pidgeot.update(flyDirection)
